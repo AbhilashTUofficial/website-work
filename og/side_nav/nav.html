@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>navigation bar</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700i" rel="stylesheet">
+    
+     
+    <style>
+    
+    html {
+  box-sizing: border-box;
+}
+body{    
+    font-family: 'Roboto Condensed', sans-serif;     
+    
+}
+body {
+  padding: 0;
+  margin: 0;
+  background-image: url(bg-01.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 85vh;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+
+/* _-_-_-_-__ morphing navigation styling __-_-_-_-_ */
+
+.header {
+  width: 100vw;
+  height: 100vh;   
+  background-size: cover;
+  position: relative;
+}
+
+.navigation {
+  width: 100px;
+  height: 100%;
+  display: block;
+  padding-right: 40px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: white;
+  border-radius: 0% 50% 350% 0%;   
+  perspective: 800;   
+  transition: all 800ms cubic-bezier(.9, 0, .33, 1);
+}
+
+.logo {
+  width: 70px;
+  height: 70px;
+  display: block;
+  position: absolute;
+  top: 8%;
+  left: 15%; 
+  cursor: pointer;  
+  transform-style: preserve-3d;   
+  transform: rotateY(-360deg);   
+  transition: all 800ms cubic-bezier(.9, 0, .33, 1);
+}
+
+.navigation__icon {
+  width: 55px;
+  height: 44px;
+  display: block;
+  position: relative;
+  top: 22%;
+  left: 35%;
+  background: hsla(312, 51%, 41%, 0.0);
+  cursor: pointer;  
+  transition: all 800ms cubic-bezier(.9, 0, .33, 1);
+}
+
+.navigation__icon .topBar {
+  width: 55px;
+  height: 2px;
+  display: block;
+  background: #f7082d;
+  position: absolute;
+  top: 10px;   
+  transform: rotate(0);   
+  transition: all 800ms cubic-bezier(.9, 0, .33, 1);
+}
+
+.navigation__icon .middleBar {
+  width: 55px;
+  height: 2px;
+  display: block;
+  background: #f7082d;
+  position: absolute;
+  top: 20px;   
+  transform: rotate(0);
+   transition: all 800ms cubic-bezier(.9, 0, .33, 1);
+}
+
+.navigation__icon .bottomBar {
+  width: 35px;
+  height: 2px;
+  display: block;
+  background: #f7082d;
+  position: absolute;
+  top: 30px;   
+  transform: rotate(0);   
+  transition: all 800ms cubic-bezier(.9, 0, .33, 1);
+}
+
+.navigation .navigation__ul {
+  float: right;
+  margin-top: 220px;
+  opacity: 0;
+  visibility: hidden;  
+  transform: rotateY(-90deg) translateX(-300px);   
+  transition: all 800ms cubic-bezier(.9, 0, .33, 1);
+}
+
+.navigation .navigation__ul li {
+  list-style: none;
+  text-align: right;
+}
+
+.navigation .navigation__ul a {
+  display: block;
+  font-size: 30px;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+  margin-bottom: 15px;
+}
+
+.navigation .navigation__ul a:hover {
+  color: hsl(185, 96%, 33%);
+}
+
+.navigation .navigation__social {
+  width: 100%;
+  height: 30px;
+  padding-right: 45px;
+  position: absolute;
+  bottom: 18%;
+}
+
+.navigation .navigation__social-ul {
+  float: right;
+  list-style: none;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;   
+  transform: rotateY(-90deg) translateX(-300px);   
+  transition: all 800ms cubic-bezier(.9, 0, .33, 1);
+}
+
+.navigation .navigation__social-ul li {
+  display: inline-block;
+  opacity: 0;
+  visibility: hidden;   
+  transform: translateY(35px);   
+  transition: all 800ms cubic-bezier(.9, 0, .33, 1);
+}
+
+.navigation .social-icon {
+  width: 30px;
+  height: 30px;
+  display: block;   
+  margin-left: 15px;
+}
+
+ 
+.navigation-open {
+  width: 350px;
+  height: 100%;
+  display: block;
+  background: #FFF;
+  position: absolute;
+  left: 0;
+  border-radius: 0% 1% 1% 0%;
+}
+
+.navigation-open .logo {
+  left: 68%;   
+  transform: rotateY(0);
+}
+
+.navigation-open .navigation__icon {
+  left: 80%;
+}
+
+.navigation-open .navigation__ul {
+  opacity: 1;
+  visibility: visible;
+}
+
+.navigation-open .navigation__social-ul {
+  opacity: 1;
+  visibility: visible;
+}
+
+.navigation-open .topBar {
+  top: 21px;   
+  transform: rotate(45deg);
+}
+
+.navigation-open .middleBar {
+  width: 0;
+  top: 22px;
+  opacity: 0;
+  visibility: hidden; 
+  transform: translateX(30px);
+}
+
+.navigation-open .bottomBar {
+  width: 55px;
+  top: 21px;   
+  transform: rotate(-45deg);
+}
+
+.navigation-open .navigation__ul {   
+  transform: rotateY(0) translateX(0);
+}
+
+.navigation-open .navigation__social-ul {   
+  transform: rotateY(0) translateX(0);
+}
+
+.navigation-open .navigation__social-ul li {
+  opacity: 1;
+  visibility: visible;   
+  transform: translateY(0px);
+}
+
+.navigation-open .navigation__social-ul li:nth-child(1) {   
+  transition-delay: .5s;
+}
+
+.navigation-open .navigation__social-ul li:nth-child(2) {   
+  transition-delay: .46s;
+}
+
+.navigation-open .navigation__social-ul li:nth-child(3) {   
+  transition-delay: .43s;
+}
+
+.navigation-open .navigation__social-ul li:nth-child(4) {   
+  transition-delay: .4s;
+}
+    
+    </style>
+</head>
+<body>
+    <header class="header">
+
+  <nav class="navigation">
+
+    <section class="logo"></section>
+
+    <section class="navigation__icon">
+      <span class="topBar"></span>
+      <span class="middleBar"></span>
+      <span class="bottomBar"></span>
+    </section>
+
+    <ul class="navigation__ul">
+      <li><a href="">HOME</a></li>
+      <li><a href="">GALLERY</a></li>
+      <li><a href="">TEAM</a></li>
+      <li><a href="">CLIENT</a></li>
+      <li><a href="">FAQ</a></li>
+    </ul>
+
+    <section class="navigation__social">
+      <ul class="navigation__social-ul">
+        <li>
+          <a href="" class="social-icon"></a>
+        </li>
+        <li>
+          <a href="" class="social-icon"></a>
+        </li>
+        <li>
+          <a href="" class="social-icon"></a>
+        </li>
+        <li>
+          <a href="" class="social-icon"></a>
+        </li>
+      </ul>
+    </section>
+
+  </nav>
+
+</header>
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script>
+    
+        
+   
+     $(function() {
+   $(".navigation__icon").click(function() {
+     $(".navigation").toggleClass('navigation-open');
+   });
+ });
+  
+    
+        
+   
+    
+    </script>
+</body>
+</html>

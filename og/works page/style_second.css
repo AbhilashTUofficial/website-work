@@ -1,0 +1,49 @@
+.text{
+	color: black;
+}
+
+.services{
+	background-image:linear-gradient(to right, orange ,rgb(245, 188, 66));
+	padding-bottom: 100px;
+	padding-left: 100px;
+	padding-right: 100px;
+	padding-top:-100px;
+	margin-top: 100px;
+	height: -300px;
+	text-align:center;
+
+}
+.services .container{
+	width: 100%;
+	display:flex;
+	justify-content: space-between;
+	align-items:center;
+	flex-wrap:wrap;
+	margin-top: 60px;
+}
+.services .container .serviceBx
+{
+	position: relative;
+	background:white;
+	width: 200px;
+	height: 200px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.services .container .serviceBx img{
+	max-width: 100px;
+
+}
+.services .container .serviceBx h2{
+	font-weight: 500;
+	font-size: 20px;
+	letter-spacing: 1px;
+
+
+}
+.serviceBx{
+	border-radius: 50%;
+
+	box-shadow: 5px 5px #666;
+}

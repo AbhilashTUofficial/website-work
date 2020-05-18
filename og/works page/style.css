@@ -1,0 +1,44 @@
+.text{
+	color: black;
+}
+
+.services{
+	background:orange;
+	padding:100px;
+	height: 300px;
+	text-align:center;
+
+}
+.services .container{
+	width: 100%;
+	display:flex;
+	justify-content: space-between;
+	align-items:center;
+	flex-wrap:wrap;
+	margin-top: 60px;
+}
+.services .container .serviceBx
+{
+	position: relative;
+	background:white;
+	width: 350px;
+	height: 400px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.services .container .serviceBx img{
+	max-width: 100px;
+
+}
+.services .container .serviceBx h2{
+	font-weight: 500;
+	font-size: 20px;
+	letter-spacing: 1px;
+
+
+}
+.serviceBx{
+
+	box-shadow: 5px 5px #666;
+}
